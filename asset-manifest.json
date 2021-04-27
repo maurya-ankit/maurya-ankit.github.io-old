@@ -5,12 +5,12 @@
     "main.css": "/static/css/main.f79a939c.chunk.css",
     "main.js": "/static/js/main.c55159eb.chunk.js",
     "main.js.map": "/static/js/main.c55159eb.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b9380a9b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b9380a9b.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ebc9fafe.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ebc9fafe.js.map",
     "static/js/3.645ccc40.chunk.js": "/static/js/3.645ccc40.chunk.js",
     "static/js/3.645ccc40.chunk.js.map": "/static/js/3.645ccc40.chunk.js.map",
-    "static/js/4.39d67366.chunk.js": "/static/js/4.39d67366.chunk.js",
-    "static/js/4.39d67366.chunk.js.map": "/static/js/4.39d67366.chunk.js.map",
+    "static/js/4.5b292b2f.chunk.js": "/static/js/4.5b292b2f.chunk.js",
+    "static/js/4.5b292b2f.chunk.js.map": "/static/js/4.5b292b2f.chunk.js.map",
     "static/js/5.38bf328f.chunk.js": "/static/js/5.38bf328f.chunk.js",
     "static/js/5.38bf328f.chunk.js.map": "/static/js/5.38bf328f.chunk.js.map",
     "static/js/6.a357bec5.chunk.js": "/static/js/6.a357bec5.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/undraw_Outer_space_drqu.638e5f23.svg": "/static/media/undraw_Outer_space_drqu.638e5f23.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9380a9b.js",
+    "static/js/runtime-main.ebc9fafe.js",
     "static/js/3.645ccc40.chunk.js",
     "static/css/main.f79a939c.chunk.css",
     "static/js/main.c55159eb.chunk.js"
