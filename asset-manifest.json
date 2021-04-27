@@ -1,0 +1,36 @@
+{
+  "files": {
+    "static/js/0.f8633b18.chunk.js": "/static/js/0.f8633b18.chunk.js",
+    "static/js/0.f8633b18.chunk.js.map": "/static/js/0.f8633b18.chunk.js.map",
+    "main.css": "/static/css/main.f79a939c.chunk.css",
+    "main.js": "/static/js/main.c55159eb.chunk.js",
+    "main.js.map": "/static/js/main.c55159eb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b9380a9b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b9380a9b.js.map",
+    "static/js/3.645ccc40.chunk.js": "/static/js/3.645ccc40.chunk.js",
+    "static/js/3.645ccc40.chunk.js.map": "/static/js/3.645ccc40.chunk.js.map",
+    "static/js/4.39d67366.chunk.js": "/static/js/4.39d67366.chunk.js",
+    "static/js/4.39d67366.chunk.js.map": "/static/js/4.39d67366.chunk.js.map",
+    "static/js/5.38bf328f.chunk.js": "/static/js/5.38bf328f.chunk.js",
+    "static/js/5.38bf328f.chunk.js.map": "/static/js/5.38bf328f.chunk.js.map",
+    "static/js/6.a357bec5.chunk.js": "/static/js/6.a357bec5.chunk.js",
+    "static/js/6.a357bec5.chunk.js.map": "/static/js/6.a357bec5.chunk.js.map",
+    "index.html": "/index.html",
+    "service-worker.js": "/service-worker.js",
+    "service-worker.js.map": "/service-worker.js.map",
+    "static/css/main.f79a939c.chunk.css.map": "/static/css/main.f79a939c.chunk.css.map",
+    "static/js/0.f8633b18.chunk.js.LICENSE.txt": "/static/js/0.f8633b18.chunk.js.LICENSE.txt",
+    "static/js/3.645ccc40.chunk.js.LICENSE.txt": "/static/js/3.645ccc40.chunk.js.LICENSE.txt",
+    "static/media/ankit.899255ef.jpg": "/static/media/ankit.899255ef.jpg",
+    "static/media/undraw_Code_thinking_re_gka2.753f2580.svg": "/static/media/undraw_Code_thinking_re_gka2.753f2580.svg",
+    "static/media/undraw_Container_ship_ok1c.b05b78c9.svg": "/static/media/undraw_Container_ship_ok1c.b05b78c9.svg",
+    "static/media/undraw_Golden_gate_bridge_jkph.e9f8bbce.svg": "/static/media/undraw_Golden_gate_bridge_jkph.e9f8bbce.svg",
+    "static/media/undraw_Outer_space_drqu.638e5f23.svg": "/static/media/undraw_Outer_space_drqu.638e5f23.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9380a9b.js",
+    "static/js/3.645ccc40.chunk.js",
+    "static/css/main.f79a939c.chunk.css",
+    "static/js/main.c55159eb.chunk.js"
+  ]
+}
