@@ -8,7 +8,8 @@ import svgImage3 from '../../resources/undraw_Container_ship_ok1c.svg'
 import svgImage4 from '../../resources/undraw_Outer_space_drqu.svg'
 import { Box } from '@material-ui/core'
 import { motion } from "framer-motion";
-
+import axios from 'axios'
+// import cardsdata from '../../data/cards.json'
 const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -53,18 +54,10 @@ const images = [
 ]
 const ItemsCard = () => {
     const classes = useStyle()
-    const [cards, setCard] = useState([
-        {
-            title: "Educations",
-            desc: "My Education details so far",
-            id: "Educations"
-        },
-        {
-            title: "Projects",
-            desc: "My Project details so far",
-            id: "Projects"
-        },
-    ])
+    const [cards, setCards] = useState([]);
+    useEffect(() => {
+        axios.get(`/data/cards.json`).then(res => setCards(res.data))
+    }, [])
 
     return (
         <Box className={classes.root}>

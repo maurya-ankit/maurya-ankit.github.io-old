@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import AboutMe from '../components/homepage/AboutMe'
 import ImageBox from '../components/homepage/ImageBox'
@@ -9,6 +9,8 @@ import { motion } from 'framer-motion'
 import Box from '@material-ui/core/Box'
 import pageTransition from '../animation/PageTransition'
 import { Itemfm, Containerfm } from '../animation/ItemAppear'
+import axios from 'axios'
+// import aboutme from '../data/aboutme.json'
 const useStyle = makeStyles(() => ({
     root: {
         marginTop: 20,
@@ -22,11 +24,10 @@ const useStyle = makeStyles(() => ({
 
 const HomePage = () => {
     const classes = useStyle();
-    const [about, setAbout] = useState({
-        title: "Hi, I am Ankit Maurya",
-        subtitle: "I am a Student a Indian Institute of Information Technology Pune",
-        imgurl: svg2,
-    })
+    const [about, setAbout] = useState({})
+    useEffect(() => {
+        axios.get(`/data/aboutme.json`).then(res => setAbout(res.data))
+    }, [])
 
     return (
         <Box display="flex" flexDirection="column" alignItems="stretch" padding={0}

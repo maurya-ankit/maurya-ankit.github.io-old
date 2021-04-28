@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { Divider, makeStyles, IconButton } from '@material-ui/core'
@@ -11,6 +11,8 @@ import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import Skeleton from '@material-ui/lab/Skeleton';
 import EditOutlined from '@material-ui/icons/EditOutlined'
+import axios from 'axios'
+
 const useStyle = makeStyles((theme) => ({
     root: {
         borderRadius: 20,
@@ -62,7 +64,6 @@ const useStyle = makeStyles((theme) => ({
             maxWidth: "100%",
             [theme.breakpoints.down('sm')]: {
                 height: 315
-                // aspectRatio: "inherit"
             }
         }
     },
@@ -82,7 +83,9 @@ const DetailPage = (props) => {
     const { url } = useRouteMatch();
     const [content, setcontent] = useState("")
     const [title, setTitle] = useState("")
-
+    useEffect(() => {
+        axios.get(`/data/cards/${id.toString().toLowerCase()}.md`).then(res => setcontent(res.data))
+    }, [id])
     return (
         <Box display="flex" flexDirection="column" alignItems="stretch" padding={0}
             component={motion.div}

@@ -62,13 +62,6 @@ const Card = (props) => {
                             {props.data.desc}
 
                         </Typography>
-
-                        <Button variant="text" color="default" endIcon={<ArrowForwardIcon />} className={classes.btn}
-                            component={Link}
-                            to={`/detail/${props.data.id}`}
-                        >
-                            Read More
-                    </Button>
                     </Grid>
                 </Grid>
             </Box ></>
