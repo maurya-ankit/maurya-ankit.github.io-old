@@ -2,11 +2,13 @@
   {
     "title": "Educations",
     "desc": "My Education details so far",
-    "id": "educations"
+    "id": "educations",
+    "image": "/data/education.jpg"
   },
   {
     "title": "Projects",
     "desc": "My Project details so far",
-    "id": "Projects"
+    "id": "Projects",
+    "image": "/data/projects.jpg"
   }
 ]
