@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Educations",
+    "desc": "My Education details so far",
+    "id": "educations"
+  },
+  {
+    "title": "Projects",
+    "desc": "My Project details so far",
+    "id": "Projects"
+  }
+]
