@@ -23,18 +23,15 @@ const useStyle = makeStyles((theme) => ({
     },
     content: {
         margin: 20,
-        backdropFilter: "blur(4px)",
-        padding: 10,
-        borderRadius: theme.spacing(2)
+        padding: 20,
+        borderRadius: theme.spacing(3)
     },
     subtitle: {
         margin: 20,
-        // color: "white",
         fontSize: 20,
         display: "none",
         transition: "display 2s",
-        backdropFilter: "blur(4px)",
-        padding: 10,
+        padding: 20,
         borderRadius: theme.spacing(2)
 
     },
@@ -74,7 +71,7 @@ const Card = (props) => {
                     <Grid item>
                         <Typography variant="subtitle1" color="textSecondary" className={classes.subtitle}>
                             {props.data.desc}
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate libero similique minus aperiam tenetur placeat et nesciunt quam velit eaque.
+
 
                         </Typography>
                     </Grid>

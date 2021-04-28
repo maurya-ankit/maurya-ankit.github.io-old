@@ -7,18 +7,19 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Light from './theme/Light'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
-import Loading from './pages/Loading'
 import { AnimatePresence } from "framer-motion"
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import { CircularProgress } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
 import ServiceWorkerWrapper from './ServiceWorkerWrapper.js'
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const DetailPage = React.lazy(() => import('./pages/DetailPage'));
 const EditDetail = React.lazy(() => import('./pages/EditDetail'));
+const Loading = React.lazy(() => import('./pages/Loading'))
 
 //--------------------------------------
 
@@ -33,7 +34,7 @@ ReactDOM.render(
       <Container maxWidth="lg">
         <AnimatePresence>
           <Switch >
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<CircularProgress />}>
               <Route path="/" exact>
                 <HomePage />
               </Route>
@@ -43,7 +44,7 @@ ReactDOM.render(
               <Route path="/contact">
                 <Loading />
               </Route>
-              <Route path="/detail/:id/edit">
+              <Route path="/markdown">
                 <EditDetail />
               </Route>
             </Suspense>

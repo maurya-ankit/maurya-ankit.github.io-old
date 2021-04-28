@@ -2,9 +2,8 @@ import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
-import { InputBase, Button, Grid, Typography, Box } from '@material-ui/core';
+import { InputBase, Typography, Box } from '@material-ui/core';
 import clsx from 'clsx';
-import { useHistory } from 'react-router'
 const useStyle = makeStyles((theme) => ({
     root: {
         borderRadius: theme.spacing(2),
@@ -66,7 +65,6 @@ const useStyle = makeStyles((theme) => ({
 const EditDetail = (props) => {
     const classes = useStyle()
     const [content, setContent] = useState("")
-    const history = useHistory()
 
     const handleOnChange = (e) => {
         setContent(e.target.value)
@@ -91,24 +89,6 @@ const EditDetail = (props) => {
             </Typography>
                     <ReactMarkdown plugins={[gfm]} allowDangerousHtml className={clsx(classes.root, classes.markdown)} children={content} />
                 </>}
-                <Grid container spacing={1}
-                    justify="space-around"
-                >
-                    <Grid item>
-                        <Button variant="contained" color="secondary" onClick={() => history.goBack()}>
-                            Back
-                    </Button>
-                    </Grid>
-                    {content && <Grid item>
-                        <Button variant="contained" color="primary"
-                        // onClick={handleSubmit}
-                        >
-                            Submit
-                    </Button>
-                    </Grid>}
-
-
-                </Grid>
 
             </>
         </Box>

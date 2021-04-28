@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles, IconButton } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import { motion } from 'framer-motion'
 import pageTransition from '../animation/PageTransition'
 import { Itemfm, Containerfm } from '../animation/ItemAppear'
-import { useParams, Link, useRouteMatch } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import Skeleton from '@material-ui/lab/Skeleton';
-import EditOutlined from '@material-ui/icons/EditOutlined'
 import axios from 'axios'
 
 const useStyle = makeStyles((theme) => ({
@@ -80,7 +79,6 @@ const useStyle = makeStyles((theme) => ({
 const DetailPage = (props) => {
     const classes = useStyle()
     const { id } = useParams()
-    const { url } = useRouteMatch();
     const [content, setcontent] = useState("")
     useEffect(() => {
         axios.get(`/data/cards/${id.toString().toLowerCase()}.md`).then(res => setcontent(res.data))
@@ -106,9 +104,6 @@ const DetailPage = (props) => {
 
 
             >
-
-
-
                 <Grid
                     container
                     spacing={1}
@@ -122,13 +117,6 @@ const DetailPage = (props) => {
                     animate="visible"
                     style={{ paddingLeft: 0, padding: 20 }}
                 >
-                    {/* <Grid item xs={12} sm={6}
-                        component={motion.li}
-
-                        style={{ listStyle: "none", }} variants={Itemfm}
-                    >
-                        <img src={image} alt="side" width={400} className={classes.img} />
-                    </Grid> */}
                     <Grid item xs sm component={motion.li}
 
                         style={{ listStyle: "none" }} variants={Itemfm}>
@@ -151,14 +139,10 @@ const DetailPage = (props) => {
 
                         </>}
                     </Grid>
-                    <IconButton aria-label="edit"
-                        component={Link} to={`${url}/edit`}
-                    >
-                        <EditOutlined />
-                    </IconButton>
                 </Grid>
 
             </Grid>
+
         </Box>
     )
 }

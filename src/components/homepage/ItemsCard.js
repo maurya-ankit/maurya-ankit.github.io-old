@@ -45,7 +45,7 @@ const ItemsCard = () => {
 
             <Grid
                 container
-                spacing={3}
+                spacing={2}
                 direction="row"
                 justify="flex-start"
                 alignItems="center"
