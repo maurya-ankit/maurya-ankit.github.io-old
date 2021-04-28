@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
-import { InputBase, Button, Grid, Typography, Box, CircularProgress } from '@material-ui/core';
+import { InputBase, Button, Grid, Typography, Box } from '@material-ui/core';
 import clsx from 'clsx';
 import { useHistory } from 'react-router'
 const useStyle = makeStyles((theme) => ({

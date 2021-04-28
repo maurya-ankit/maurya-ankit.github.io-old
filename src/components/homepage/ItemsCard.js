@@ -2,14 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core'
 import Card from './card/Card'
-import svgImage2 from '../../resources/undraw_Golden_gate_bridge_jkph.svg'
-import svgImage from '../../resources/undraw_Code_thinking_re_gka2.svg'
-import svgImage3 from '../../resources/undraw_Container_ship_ok1c.svg'
-import svgImage4 from '../../resources/undraw_Outer_space_drqu.svg'
 import { Box } from '@material-ui/core'
 import { motion } from "framer-motion";
 import axios from 'axios'
-// import cardsdata from '../../data/cards.json'
 const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -37,21 +32,7 @@ const useStyle = makeStyles(() => ({
         padding: 0
     }
 }))
-const images = [
-    {
-        img: svgImage
-    },
-    {
-        img: svgImage2
-    },
-    {
-        img: svgImage3
-    },
-    {
-        img: svgImage4
-    }
 
-]
 const ItemsCard = () => {
     const classes = useStyle()
     const [cards, setCards] = useState([]);
@@ -78,10 +59,10 @@ const ItemsCard = () => {
             >
                 {cards.map((card, index) => (
                     <Grid item xs={12} sm={6} key={index} component={motion.li}
-                        whileHover={{ scale: 0.95 }}
-                        whileTap={{ scale: 0.9 }}
+                        whileHover={{ scale: 0.98 }}
+                        whileTap={{ scale: 0.95 }}
                         style={{ listStyle: "none" }} variants={item} >
-                        <Card data={card} img={images[index % images.length].img} />
+                        <Card data={card} />
                     </Grid>
                 ))}
             </Grid>

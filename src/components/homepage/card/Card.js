@@ -1,23 +1,42 @@
-import { makeStyles, Typography, Grid, Button, Box, CircularProgress } from '@material-ui/core'
-import React, { useState, lazy, Suspense } from 'react'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { makeStyles, Typography, Grid, Box } from '@material-ui/core'
+import React from 'react'
 import { Link } from 'react-router-dom';
 const useStyle = makeStyles((theme) => ({
     card: {
         backgroundColor: "#b6e3ff",
         borderRadius: 20,
 
-        backgroundImage: props => `url(${props.img})`,
+        backgroundImage: props => `url(${props.data.image})`,
+        backgroundSize: "cover",
+
         height: 400,
         textDecoration: "none",
         color: "#000",
-        '& hover': {
-            backgroundColor: "#fff",
+        '&:hover': {
+            backgroundColor: "#a6e3ff",
 
+        },
+        '&:hover $subtitle': {
+            margin: 20,
+            display: "block"
         }
     },
     content: {
         margin: 20,
+        backdropFilter: "blur(4px)",
+        padding: 10,
+        borderRadius: theme.spacing(2)
+    },
+    subtitle: {
+        margin: 20,
+        // color: "white",
+        fontSize: 20,
+        display: "none",
+        transition: "display 2s",
+        backdropFilter: "blur(4px)",
+        padding: 10,
+        borderRadius: theme.spacing(2)
+
     },
     btn: {
         margin: 10,
@@ -29,9 +48,6 @@ const useStyle = makeStyles((theme) => ({
 }))
 const Card = (props) => {
     const classes = useStyle(props)
-    const { isAuthenticated, editing } = props
-    const isLoggedIn = isAuthenticated && editing;
-    const [edit, setEdit] = useState(isLoggedIn && false)
     return (
         <>
             < Box>
@@ -39,27 +55,26 @@ const Card = (props) => {
                 <Grid
                     container
                     spacing={1}
-                    direction="row"
-                    justify="flex-start"
-                    alignItems="flex-start"
+                    direction="column"
+                    justify="center"
+                    alignItems="center"
                     alignContent="center"
                     wrap="nowrap"
-                    // component={motion.li}
-                    component={isLoggedIn ? "div" : Link}
+                    component={Link}
                     to={`/detail/${props.data.id}`}
-                    // className={classes.blur}
                     className={classes.card}
-                // whileHover={{ scale: 0.95 }}
-                // whileTap={{ scale: 0.9 }}
                 >
 
                     <Grid item>
 
-                        <Typography variant="h3" color="initial" className={classes.content}>
+                        <Typography variant="h1" color="initial" className={classes.content}>
                             {props.data.title}
                         </Typography>
-                        <Typography variant="subtitle1" color="initial" className={classes.content}>
+                    </Grid>
+                    <Grid item>
+                        <Typography variant="subtitle1" color="textSecondary" className={classes.subtitle}>
                             {props.data.desc}
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate libero similique minus aperiam tenetur placeat et nesciunt quam velit eaque.
 
                         </Typography>
                     </Grid>

@@ -4,13 +4,11 @@ import AboutMe from '../components/homepage/AboutMe'
 import ImageBox from '../components/homepage/ImageBox'
 import { Divider, makeStyles } from '@material-ui/core'
 import ItemsCard from '../components/homepage/ItemsCard'
-import svg2 from '../resources/ankit.jpg'
 import { motion } from 'framer-motion'
 import Box from '@material-ui/core/Box'
 import pageTransition from '../animation/PageTransition'
 import { Itemfm, Containerfm } from '../animation/ItemAppear'
 import axios from 'axios'
-// import aboutme from '../data/aboutme.json'
 const useStyle = makeStyles(() => ({
     root: {
         marginTop: 20,

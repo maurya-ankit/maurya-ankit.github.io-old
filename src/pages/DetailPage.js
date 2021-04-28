@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { Divider, makeStyles, IconButton } from '@material-ui/core'
+import { makeStyles, IconButton } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import { motion } from 'framer-motion'
 import pageTransition from '../animation/PageTransition'
@@ -16,7 +16,7 @@ import axios from 'axios'
 const useStyle = makeStyles((theme) => ({
     root: {
         borderRadius: 20,
-        backgroundColor: theme.palette.alternate.primary,
+        // backgroundColor: theme.palette.alternate.primary,
         // margin: 10,
         padding: theme.spacing(2),
     },
@@ -44,7 +44,7 @@ const useStyle = makeStyles((theme) => ({
             ...theme.typography.subtitle1,
             paddingLeft: 0,
             margin: theme.spacing(2),
-            fontSize: theme.spacing(2)
+            fontSize: theme.spacing(2),
         },
         "& p": theme.typography.body1,
         "& code": {
@@ -52,13 +52,13 @@ const useStyle = makeStyles((theme) => ({
             margin: 10,
             fontFamily: "Courier Prime",
         }, "& img": {
-            borderRadius: theme.spacing(2),
+            borderRadius: theme.spacing(1),
             display: "block",
             height: "auto",
             maxWidth: "100%"
         },
         "& iframe": {
-            borderRadius: theme.spacing(2),
+            borderRadius: theme.spacing(1),
             // display: "block",
             // height: "auto",
             maxWidth: "100%",
@@ -82,7 +82,6 @@ const DetailPage = (props) => {
     const { id } = useParams()
     const { url } = useRouteMatch();
     const [content, setcontent] = useState("")
-    const [title, setTitle] = useState("")
     useEffect(() => {
         axios.get(`/data/cards/${id.toString().toLowerCase()}.md`).then(res => setcontent(res.data))
     }, [id])
@@ -109,10 +108,7 @@ const DetailPage = (props) => {
             >
 
 
-                <Typography variant="h3" color="initial" align="center">
-                    {title}
-                </Typography>
-                <Divider variant="middle" className={classes.divider} />
+
                 <Grid
                     container
                     spacing={1}
