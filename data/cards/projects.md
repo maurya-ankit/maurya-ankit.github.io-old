@@ -11,7 +11,8 @@
 > - Django & Django Rest Framework
 
 > - React.js
->   `Github Repository` : [maurya-ankit/realtime-chat](https://github.com/maurya-ankit/realtime-chat)
+
+> `Github Repository` : [maurya-ankit/realtime-chat](https://github.com/maurya-ankit/realtime-chat)
 
 <hr/>
 
@@ -22,7 +23,8 @@
 > - Plotly Dash (Flask framework Based)
 
 > - Pandas, Numpy
->   `Github Repository` : [maurya-ankit/covid-19-Dashboard](https://github.com/maurya-ankit/covid-19-Dashboard)
+
+> `Github Repository` : [maurya-ankit/covid-19-Dashboard](https://github.com/maurya-ankit/covid-19-Dashboard)
 
 <hr/>
 
@@ -31,7 +33,8 @@
 > ##### Created with 👇
 >
 > - Django
->   `Github Repository` : [maurya-ankit/django-redirect](https://github.com/maurya-ankit/django-redirect)
+
+> `Github Repository` : [maurya-ankit/django-redirect](https://github.com/maurya-ankit/django-redirect)
 
 <hr/>
 
@@ -42,7 +45,8 @@
 > - React.js
 
 > - Django & Django Rest Framework
->   `Github Repository` : [maurya-ankit/E_ClassRoom](https://github.com/maurya-ankit/E_ClassRoom)
+
+> `Github Repository` : [maurya-ankit/E_ClassRoom](https://github.com/maurya-ankit/E_ClassRoom)
 
 <hr/>
 
@@ -53,4 +57,5 @@
 > - Java
 
 > - JBDC
->   `Github Repository` : [maurya-ankit/CarBooking](https://github.com/maurya-ankit/CarBooking)
+
+> `Github Repository` : [maurya-ankit/CarBooking](https://github.com/maurya-ankit/CarBooking)
