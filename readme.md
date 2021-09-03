@@ -1,4 +1,4 @@
-# Steps to create one for yourself
+<!---# Steps to create one for yourself
 
 - clone this repo to your local machine
 - open packange.json file and change value of name and homepage url (home page url should be like -> `https://[githubUsername].github.io` )
@@ -9,3 +9,5 @@
     `markdown file will support HTML elements as well with inline css, so feel free to customize as you want`
 
 ## create a repository named [githubUsername].github.io and push the above all codes to there
+
+--->
